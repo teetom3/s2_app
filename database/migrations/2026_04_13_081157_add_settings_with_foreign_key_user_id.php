@@ -15,10 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('theme');
             $table->string('lang');
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id')->unique()->constrained()->cascadeOnDelete();
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         }); 
     }
 
