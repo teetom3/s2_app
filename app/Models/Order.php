@@ -14,7 +14,7 @@ class Order extends Model
         'amount',
         'status',
         'orderable_id',
-        'orderable_type',
+        
     ];
 
     public function user()
