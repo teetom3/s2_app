@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        DB::table('settings')->truncate();
+        
 
         Schema::table('settings', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
